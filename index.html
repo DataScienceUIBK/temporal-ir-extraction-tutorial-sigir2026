@@ -109,6 +109,34 @@
       border-radius: 16px;
       padding: 18px;
       text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .presenter:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .presenter img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 3px solid rgba(255,255,255,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .presenter:hover img {
+      transform: scale(1.08);
+    }
+
+    
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
     }
 
     .presenter img {
@@ -176,9 +204,9 @@
     <section class="info-grid">
       <div class="card">
         <h2>Conference</h2>
-        <p><strong><a href="https://sigir2026.org/en-AU" target="_blank" rel="noopener noreferrer">SIGIR 2026</a></strong></p>
+        <p><strong><a href="https://sigir-2026.org/" target="_blank" rel="noopener noreferrer">SIGIR 2026</a></strong></p>
         <p>Melbourne, Australia</p>
-        <p>20-24 July 2026</p>
+        <p>July 2026</p>
       </div>
 
       <div class="card">
