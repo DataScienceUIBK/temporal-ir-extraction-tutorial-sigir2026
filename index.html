@@ -3,152 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SIGIR 2026 Tutorial</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <title>Temporal Information Retrieval and Extraction: From Foundations to RAG | SIGIR 2026</title>
   <style>
-    :root {
-      --bg-gradient: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --accent: #7c3aed;
-    }
-
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-gradient);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at top left, rgba(255, 120, 80, 0.35), transparent 30%),
+        radial-gradient(circle at top right, rgba(168, 85, 247, 0.35), transparent 30%),
+        linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      color: var(--text);
+      padding: 40px 20px;
     }
 
     .container {
-      max-width: 900px;
-      width: 100%;
-      background: var(--card);
-      border-radius: 20px;
-      padding: 50px 35px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero {
       text-align: center;
-      animation: fadeIn 1s ease;
+      padding: 80px 30px 60px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .label {
+    .badge {
       display: inline-block;
-      margin-bottom: 15px;
-      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 10px 18px;
       border-radius: 999px;
-      background: linear-gradient(90deg, #6366f1, #a855f7);
-      color: white;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+      backdrop-filter: blur(8px);
     }
 
-    h1 {
-      font-size: 2.3rem;
-      margin-bottom: 20px;
-      line-height: 1.3;
-      background: linear-gradient(90deg, #4f46e5, #9333ea);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      max-width: 900px;
+      margin: 0 auto 20px;
     }
 
-    .subtitle {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin-bottom: 30px;
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 40px 0 50px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #fbbf24;
+    }
+
+    .card p,
+    .card li,
+    .card span {
+      color: rgba(255, 255, 255, 0.9);
       line-height: 1.6;
     }
 
-    .section {
-      margin-top: 30px;
-      padding-top: 20px;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-      color: var(--accent);
-    }
-
     .presenters {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 10px;
     }
 
-    .presenters li {
-      background: linear-gradient(90deg, #eef2ff, #f5f3ff);
-      margin: 10px auto;
-      padding: 12px 16px;
-      border-radius: 10px;
-      max-width: 400px;
-      font-weight: 500;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .presenter {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 18px;
     }
 
-    .presenters li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    .presenter strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .presenter .role {
+      display: block;
+      color: #f9a8d4;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .presenter a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .presenter a:hover {
+      text-decoration: underline;
     }
 
     .coming-soon {
-      margin-top: 10px;
-      font-size: 1rem;
-      color: var(--muted);
-      font-style: italic;
+      text-align: center;
+      margin: 50px 0 30px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
     }
 
-    .footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #9ca3af;
+    .coming-soon h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #f9a8d4;
+    }
+
+    .coming-soon p {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 50px 15px 40px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
-
 <body>
-  <main class="container">
-    <div class="label">SIGIR 2026 Tutorial</div>
+  <div class="container">
+    <section class="hero">
+      <div class="badge">SIGIR 2026 Tutorial</div>
+      <h1>Temporal Information Retrieval and Extraction: From Foundations to RAG</h1>
+      <p>
+        Exploring the foundations, methods, and emerging directions of temporal information retrieval
+        and extraction, from classical approaches to modern Retrieval-Augmented Generation systems.
+      </p>
+    </section>
 
-    <h1>Temporal Information Retrieval and Extraction: From Foundations to RAG</h1>
+    <section class="info-grid">
+      <div class="card">
+        <h2>Conference</h2>
+        <p><strong>SIGIR 2026</strong></p>
+        <p>Melbourne, Australia</p>
+        <p>July 2026</p>
+      </div>
 
-    <p class="subtitle">
-      Official website for the SIGIR 2026 tutorial on temporal information retrieval and extraction.
-    </p>
+      <div class="card">
+        <h2>About the Tutorial</h2>
+        <p>
+          This tutorial will cover key concepts in temporal information retrieval and extraction,
+          including foundational methods, modern neural approaches, and the role of temporal reasoning in RAG systems.
+        </p>
+      </div>
+    </section>
 
-    <section class="section">
+    <section class="card">
       <h2>Presenters</h2>
-      <ul class="presenters">
-        <li>Presenter Name 1</li>
-        <li>Presenter Name 2</li>
-        <li>Presenter Name 3</li>
-      </ul>
+      <div class="presenters">
+        <div class="presenter">
+          <strong><a href="https://bhawnapiryani.github.io/" target="_blank" rel="noopener noreferrer">Bhawna Piryani</a></strong>
+          <span class="role">Ph.D. Candidate</span>
+          <span>University of Innsbruck, Austria</span>
+        </div>
+
+        <div class="presenter">
+          <strong><a href="https://www.avishekanand.com/" target="_blank" rel="noopener noreferrer">Avishek Anand</a></strong>
+          <span class="role">Associate Professor</span>
+          <span>Delft University of Technology, Netherlands</span>
+        </div>
+
+        <div class="presenter">
+          <strong><a href="https://www.linkedin.com/in/omar-alonso-8a5235/" target="_blank" rel="noopener noreferrer">Omar Alonso</a></strong>
+          <span class="role">Senior Manager in Applied Science</span>
+          <span>Amazon, USA</span>
+        </div>
+
+        <div class="presenter">
+          <strong><a href="https://ds-informatik.uibk.ac.at/doku.php?id=homepage" target="_blank" rel="noopener noreferrer">Adam Jatowt</a></strong>
+          <span class="role">Professor</span>
+          <span>University of Innsbruck, Austria</span>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Details</h2>
-      <p class="coming-soon">✨ More exciting details coming soon ✨</p>
+    <section class="coming-soon">
+      <h2>More Details Coming Soon</h2>
+      <p>
+        The full tutorial schedule, reading list, materials, and additional resources will be added soon.
+      </p>
     </section>
 
-    <p class="footer">Stay tuned for updates 🚀</p>
-  </main>
+    <footer>
+      <p>© 2026 SIGIR Tutorial Website</p>
+    </footer>
+  </div>
 </body>
 </html>
