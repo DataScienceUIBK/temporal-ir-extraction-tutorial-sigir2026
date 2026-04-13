@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIGIR 2026 Tutorial</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #7c3aed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 50px 35px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #6366f1, #a855f7);
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      background: linear-gradient(90deg, #4f46e5, #9333ea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 30px;
+      padding-top: 20px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
+
+    .presenters {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .presenters li {
+      background: linear-gradient(90deg, #eef2ff, #f5f3ff);
+      margin: 10px auto;
+      padding: 12px 16px;
+      border-radius: 10px;
+      max-width: 400px;
+      font-weight: 500;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .presenters li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .coming-soon {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="label">SIGIR 2026 Tutorial</div>
+
+    <h1>Temporal Information Retrieval and Extraction: From Foundations to RAG</h1>
+
+    <p class="subtitle">
+      Official website for the SIGIR 2026 tutorial on temporal information retrieval and extraction.
+    </p>
+
+    <section class="section">
+      <h2>Presenters</h2>
+      <ul class="presenters">
+        <li>Presenter Name 1</li>
+        <li>Presenter Name 2</li>
+        <li>Presenter Name 3</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Details</h2>
+      <p class="coming-soon">✨ More exciting details coming soon ✨</p>
+    </section>
+
+    <p class="footer">Stay tuned for updates 🚀</p>
+  </main>
+</body>
+</html>
