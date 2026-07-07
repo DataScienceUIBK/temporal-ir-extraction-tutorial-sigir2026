@@ -10,7 +10,7 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+ 
     :root {
       --amber: #fbbf24;
       --pink: #f9a8d4;
@@ -19,16 +19,16 @@
       --glass: rgba(255, 255, 255, 0.1);
       --glass-border: rgba(255, 255, 255, 0.18);
     }
-
+ 
     html {
       scroll-behavior: smooth;
     }
-
+ 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       * { transition: none !important; animation: none !important; }
     }
-
+ 
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: #ffffff;
@@ -40,12 +40,12 @@
       min-height: 100vh;
       padding: 0 20px 40px;
     }
-
+ 
     .container {
       max-width: 1100px;
       margin: 0 auto;
     }
-
+ 
     /* ---------- Navigation ---------- */
     nav {
       position: sticky;
@@ -57,7 +57,7 @@
       margin: 0 -20px;
       padding: 0 20px;
     }
-
+ 
     .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -68,20 +68,20 @@
       gap: 8px;
       padding: 14px 0;
     }
-
+ 
     .nav-brand {
       font-weight: bold;
       color: var(--amber);
       font-size: 1rem;
       text-decoration: none;
     }
-
+ 
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
     }
-
+ 
     .nav-links a {
       color: var(--text);
       text-decoration: none;
@@ -90,23 +90,23 @@
       border-radius: 999px;
       transition: background 0.2s ease;
     }
-
+ 
     .nav-links a:hover,
     .nav-links a:focus-visible {
       background: rgba(255, 255, 255, 0.15);
     }
-
+ 
     a:focus-visible {
       outline: 2px solid var(--amber);
       outline-offset: 2px;
     }
-
+ 
     /* ---------- Hero ---------- */
     .hero {
       text-align: center;
       padding: 80px 30px 50px;
     }
-
+ 
     .badge {
       display: inline-block;
       background: rgba(255, 255, 255, 0.12);
@@ -117,24 +117,24 @@
       margin: 0 6px 25px;
       backdrop-filter: blur(8px);
     }
-
+ 
     .badge strong {
       color: var(--amber);
     }
-
+ 
     .hero h1 {
       font-size: 3rem;
       line-height: 1.2;
       max-width: 900px;
       margin: 0 auto 20px;
     }
-
+ 
     .hero .meta {
       font-size: 1.15rem;
       color: var(--pink);
       margin-bottom: 24px;
     }
-
+ 
     .hero p.tagline {
       max-width: 750px;
       margin: 0 auto;
@@ -142,7 +142,7 @@
       line-height: 1.7;
       color: rgba(255, 255, 255, 0.85);
     }
-
+ 
     .hero-actions {
       margin-top: 32px;
       display: flex;
@@ -150,7 +150,7 @@
       flex-wrap: wrap;
       gap: 14px;
     }
-
+ 
     .btn {
       display: inline-block;
       padding: 12px 24px;
@@ -160,36 +160,36 @@
       font-size: 0.98rem;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
+ 
     .btn-primary {
       background: linear-gradient(90deg, #f59e0b, #ec4899);
       color: #ffffff;
     }
-
+ 
     .btn-secondary {
       background: var(--glass);
       border: 1px solid var(--glass-border);
       color: #ffffff;
       backdrop-filter: blur(8px);
     }
-
+ 
     .btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
-
+ 
     /* ---------- Sections & cards ---------- */
     section {
       scroll-margin-top: 80px;
       margin-bottom: 50px;
     }
-
+ 
     .section-title {
       font-size: 1.9rem;
       margin-bottom: 24px;
       color: var(--amber);
     }
-
+ 
     .section-title span {
       color: var(--pink);
       font-size: 1.1rem;
@@ -198,7 +198,7 @@
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
+ 
     .card {
       background: var(--glass);
       border: 1px solid var(--glass-border);
@@ -207,47 +207,47 @@
       backdrop-filter: blur(14px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
-
+ 
     .card h2 {
       font-size: 1.2rem;
       margin-bottom: 12px;
       color: var(--amber);
     }
-
+ 
     .card p,
     .card span,
     .card li {
       color: var(--text);
       line-height: 1.7;
     }
-
+ 
     .card a {
       color: var(--pink);
       font-weight: 600;
       text-decoration: none;
     }
-
+ 
     .card a:hover {
       text-decoration: underline;
     }
-
+ 
     .abstract p + p {
       margin-top: 14px;
     }
-
+ 
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
-
+ 
     /* ---------- Schedule timeline ---------- */
     .timeline {
       position: relative;
       padding-left: 130px;
     }
-
+ 
     .timeline::before {
       content: "";
       position: absolute;
@@ -257,12 +257,12 @@
       width: 2px;
       background: linear-gradient(180deg, var(--amber), var(--pink), #a855f7);
     }
-
+ 
     .slot {
       position: relative;
       margin-bottom: 22px;
     }
-
+ 
     .slot::before {
       content: "";
       position: absolute;
@@ -275,12 +275,12 @@
       border: 3px solid #1e1b4b;
       box-shadow: 0 0 0 2px var(--amber);
     }
-
+ 
     .slot.break::before {
       background: var(--pink);
       box-shadow: 0 0 0 2px var(--pink);
     }
-
+ 
     .slot .duration {
       position: absolute;
       left: -130px;
@@ -291,55 +291,133 @@
       color: var(--pink);
       font-weight: 600;
     }
-
+ 
     .slot .card {
       padding: 20px 24px;
     }
-
+ 
     .slot h3 {
       font-size: 1.1rem;
       margin-bottom: 8px;
       color: #ffffff;
     }
-
+ 
     .slot .goal {
       color: var(--pink);
       font-size: 0.95rem;
       margin-bottom: 10px;
       display: block;
     }
-
+ 
     .slot ul {
       list-style: none;
       margin-top: 6px;
     }
-
+ 
     .slot ul li {
       font-size: 0.95rem;
       padding-left: 18px;
       position: relative;
       margin-bottom: 5px;
     }
-
+ 
     .slot ul li::before {
       content: "•";
       color: var(--amber);
       position: absolute;
       left: 0;
     }
-
+ 
     .slot.break .card {
       background: rgba(249, 168, 212, 0.08);
       border-style: dashed;
     }
-
+ 
+    /* ---------- Related-papers dropdown ---------- */
+    details.papers {
+      margin-top: 16px;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 12px;
+    }
+ 
+    details.papers summary {
+      cursor: pointer;
+      color: var(--amber);
+      font-weight: 600;
+      font-size: 0.95rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+    }
+ 
+    details.papers summary::-webkit-details-marker {
+      display: none;
+    }
+ 
+    details.papers summary::before {
+      content: "▸";
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+ 
+    details.papers[open] summary::before {
+      transform: rotate(90deg);
+    }
+ 
+    details.papers summary:hover {
+      color: var(--pink);
+    }
+ 
+    details.papers .paper-list {
+      margin-top: 12px;
+    }
+ 
+    .paper {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      line-height: 1.55;
+      font-size: 0.92rem;
+    }
+ 
+    .paper a.title {
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration: none;
+    }
+ 
+    .paper a.title:hover {
+      color: var(--amber);
+      text-decoration: underline;
+    }
+ 
+    .paper .venue {
+      color: var(--amber);
+      font-size: 0.85rem;
+    }
+ 
+    .paper .authors {
+      color: var(--text-dim);
+      font-size: 0.87rem;
+      display: block;
+    }
+ 
+    .paper.featured {
+      border: 1px solid rgba(251, 191, 36, 0.5);
+      background: rgba(251, 191, 36, 0.08);
+    }
+ 
     /* ---------- Presenters ---------- */
     .presenters {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 18px;
     }
-
+ 
     .presenter {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -348,12 +426,12 @@
       text-align: center;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-
+ 
     .presenter:hover {
       transform: translateY(-6px);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
     }
-
+ 
     .presenter img {
       width: 100px;
       height: 100px;
@@ -363,96 +441,53 @@
       border: 3px solid rgba(255, 255, 255, 0.3);
       transition: transform 0.3s ease;
     }
-
+ 
     .presenter:hover img {
       transform: scale(1.08);
     }
-
+ 
     .presenter strong {
       display: block;
       font-size: 1.05rem;
       margin-bottom: 6px;
     }
-
+ 
     .presenter strong a {
       color: #ffffff;
       text-decoration: none;
     }
-
+ 
     .presenter strong a:hover {
       color: var(--amber);
     }
-
+ 
     .presenter .role {
       display: block;
       color: var(--pink);
       font-size: 0.95rem;
       margin-bottom: 4px;
     }
-
+ 
     .presenter .affil {
       display: block;
       color: var(--text-dim);
       font-size: 0.9rem;
       margin-bottom: 12px;
     }
-
+ 
     .presenter .bio {
       font-size: 0.88rem;
       color: var(--text);
       line-height: 1.55;
       text-align: left;
     }
-
-    /* ---------- Readings ---------- */
-    .reading-group {
-      margin-bottom: 28px;
-    }
-
-    .reading-group h3 {
-      color: var(--pink);
-      font-size: 1.05rem;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .paper {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 10px;
-      line-height: 1.55;
-    }
-
-    .paper .title {
-      font-weight: 600;
-      color: #ffffff;
-    }
-
-    .paper .venue {
-      color: var(--amber);
-      font-size: 0.88rem;
-    }
-
-    .paper .authors {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      display: block;
-    }
-
-    .paper.featured {
-      border: 1px solid rgba(251, 191, 36, 0.5);
-      background: rgba(251, 191, 36, 0.08);
-    }
-
+ 
     /* ---------- Citation ---------- */
     .bibtex-wrap {
       position: relative;
       margin-top: 14px;
     }
-
+ 
     pre.bibtex {
       background: rgba(0, 0, 0, 0.4);
       border: 1px solid var(--glass-border);
@@ -465,7 +500,7 @@
       color: #e2e8f0;
       white-space: pre;
     }
-
+ 
     .copy-btn {
       position: absolute;
       top: 10px;
@@ -479,11 +514,11 @@
       cursor: pointer;
       font-family: Arial, Helvetica, sans-serif;
     }
-
+ 
     .copy-btn:hover {
       background: rgba(255, 255, 255, 0.2);
     }
-
+ 
     footer {
       text-align: center;
       margin-top: 60px;
@@ -493,38 +528,38 @@
       font-size: 0.95rem;
       line-height: 1.8;
     }
-
+ 
     footer a {
       color: var(--pink);
       text-decoration: none;
     }
-
+ 
     footer a:hover {
       text-decoration: underline;
     }
-
+ 
     /* ---------- Mobile ---------- */
     @media (max-width: 700px) {
       .hero h1 {
         font-size: 2rem;
       }
-
+ 
       .hero {
         padding: 50px 10px 40px;
       }
-
+ 
       .timeline {
         padding-left: 0;
       }
-
+ 
       .timeline::before {
         display: none;
       }
-
+ 
       .slot::before {
         display: none;
       }
-
+ 
       .slot .duration {
         position: static;
         display: block;
@@ -541,15 +576,14 @@
       <a href="#top" class="nav-brand">SIGIR 2026 Tutorial</a>
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#schedule">Schedule</a>
+        <a href="#schedule">Schedule &amp; Readings</a>
         <a href="#presenters">Presenters</a>
-        <a href="#readings">Readings</a>
         <a href="#materials">Materials</a>
         <a href="#citation">Cite</a>
       </div>
     </div>
   </nav>
-
+ 
   <div class="container" id="top">
     <section class="hero">
       <div>
@@ -911,7 +945,7 @@
             Our comprehensive survey of Temporal Question Answering, reviewing over 150 papers.
             To appear at ACL 2026.
           </p>
-          <p style="margin-top: 12px;"><a href="https://aclanthology.org/2026.acl-long.1332/" target="_blank" rel="noopener noreferrer">Read on arXiv &rarr;</a></p>
+          <p style="margin-top: 12px;"><a href="https://aclanthology.org/2026.acl-long.1332/" target="_blank" rel="noopener noreferrer">Link to survey &rarr;</a></p>
         </div>
         <div class="card">
           <h2>&#128218; Paper Collection</h2>
@@ -961,18 +995,17 @@
         <h2 style="margin-top: 30px;">Cite the Survey</h2>
         <div class="bibtex-wrap">
           <button class="copy-btn" onclick="copyBibtex('bib-survey', this)">Copy</button>
-          <pre class="bibtex" id="bib-survey">
-            @inproceedings{piryani-etal-2026-high,
+          <pre class="bibtex" id="bib-survey">@inproceedings{piryani-etal-2026-high,
     title = "It{'}s High Time: A Survey of Temporal Question Answering",
     author = "Piryani, Bhawna  and
-      Abdallah, Abdelrahman  and
-      Mozafari, Jamshid  and
-      Anand, Avishek  and
-      Jatowt, Adam",
+              Abdallah, Abdelrahman  and
+              Mozafari, Jamshid  and
+              Anand, Avishek  and
+              Jatowt, Adam",
     editor = "Liakata, Maria  and
-      Moreira, Viviane P.  and
-      Zhang, Jiajun  and
-      Jurgens, David",
+              Moreira, Viviane P.  and
+              Zhang, Jiajun  and
+              Jurgens, David",
     booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
     month = jul,
     year = "2026",
@@ -982,8 +1015,7 @@
     doi = "10.18653/v1/2026.acl-long.1332",
     pages = "28852--28881",
     ISBN = "979-8-89176-390-6",
-    }
-          </pre>
+    }</pre>
         </div>
       </div>
     </section>
