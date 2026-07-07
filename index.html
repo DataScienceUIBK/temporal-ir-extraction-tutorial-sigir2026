@@ -564,7 +564,7 @@
         classical rule-based methods to LLM-based reasoning and Retrieval-Augmented Generation.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://arxiv.org/abs/2505.20243" target="_blank" rel="noopener noreferrer">Read the Survey</a>
+        <a class="btn btn-primary" href="https://aclanthology.org/2026.acl-long.1332/" target="_blank" rel="noopener noreferrer">Read the Survey</a>
         <a class="btn btn-secondary" href="https://github.com/DataScienceUIBK/TemporalQA-Survey" target="_blank" rel="noopener noreferrer">Paper Collection on GitHub</a>
         <a class="btn btn-secondary" href="#schedule">View Schedule</a>
       </div>
@@ -572,7 +572,7 @@
 
     <!-- ================= PRESENTERS ================= -->
     <section id="presenters">
-      <h2 class="section-title"><span>Team</span>Presenters</h2>
+      <h2 class="section-title">Presenters</h2>
       <div class="presenters">
         <div class="presenter">
           <img src="pictures/bhawna-piryani.png" alt="Bhawna Piryani" />
@@ -637,26 +637,16 @@
             is expected &mdash; the tutorial is otherwise self-contained.
           </p>
         </div>
-        <div class="card">
-          <h2>Related Tutorial</h2>
-          <p>
-            A related version of this tutorial will be presented at
-            <a href="https://datascienceuibk.github.io/temporal-ir-qa-tutorial-www2026/" target="_blank" rel="noopener noreferrer">The Web Conference 2026</a>,
-            with an emphasis on web-scale dynamics and evolving content ecosystems. This SIGIR
-            edition is tailored to the IR community, with a stronger focus on ranking models,
-            temporal indexing, evaluation, and RAG.
-          </p>
-        </div>
       </div>
     </section>
 
     <!-- ================= SCHEDULE ================= -->
     <section id="schedule">
-      <h2 class="section-title"><span>Program</span>Schedule</h2>
+      <h2 class="section-title">Schedule</h2>
       <p style="color: var(--text-dim); margin-bottom: 28px;">
         Total duration: 3 hours, including a 10-minute Q&amp;A and a 15-minute coffee break.
       </p>
-
+ 
       <div class="timeline">
         <div class="slot">
           <span class="duration">15 min</span>
@@ -670,7 +660,7 @@
             </ul>
           </div>
         </div>
-
+ 
         <div class="slot">
           <span class="duration">25 min</span>
           <div class="card">
@@ -682,9 +672,29 @@
               <li>Answering (TQA): temporal granularity and query understanding</li>
               <li>Benchmark overview: design, extraction metrics, and evaluation paradigms</li>
             </ul>
+            <details class="papers">
+              <summary>Related papers</summary>
+              <div class="paper-list">
+                <div class="paper featured">
+                  <a href="https://arxiv.org/abs/2505.20243" target="_blank" rel="noopener noreferrer" class="title">It's High Time: A Survey of Temporal Question Answering</a>
+                  <span class="venue">&middot; ACL 2026</span>
+                  <span class="authors">Piryani, Abdallah, Mozafari, Anand, Jatowt &mdash; the survey this tutorial builds on</span>
+                </div>
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/10.1145/2619088" target="_blank" rel="noopener noreferrer" class="title">Survey of Temporal Information Retrieval and Related Applications</a>
+                  <span class="venue">&middot; ACM Computing Surveys 2014</span>
+                  <span class="authors">Campos, Dias, Jorge, Jatowt</span>
+                </div>
+                <div class="paper">
+                  <a href="https://aclanthology.org/2024.findings-emnlp.562/" target="_blank" rel="noopener noreferrer" class="title">Detecting Temporal Ambiguity in Questions</a>
+                  <span class="venue">&middot; EMNLP Findings 2024</span>
+                  <span class="authors">Piryani, Abdallah, Mozafari, Jatowt</span>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
-
+ 
         <div class="slot">
           <span class="duration">20 min</span>
           <div class="card">
@@ -695,9 +705,39 @@
               <li>Probabilistic and temporal language modeling approaches for retrieval</li>
               <li>Temporal indexing, metadata annotation, and early ranking strategies</li>
             </ul>
+            <details class="papers">
+              <summary>Related papers</summary>
+              <div class="paper-list">
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/abs/10.1145/956863.956951" target="_blank" rel="noopener noreferrer" class="title">Time-Based Language Models</a>
+                  <span class="venue">&middot; CIKM 2003</span>
+                  <span class="authors">Li, Croft</span>
+                </div>
+                <div class="paper">
+                  <a href="https://link.springer.com/chapter/10.1007/11581062_4" target="_blank" rel="noopener noreferrer" class="title">Temporal Ranking of Search Engine Results</a>
+                  <span class="venue">&middot; WISE 2005</span>
+                  <span class="authors">Jatowt, Kawai, Tanaka</span>
+                </div>
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/10.1145/1328964.1328968" target="_blank" rel="noopener noreferrer" class="title">On the Value of Temporal Information in Information Retrieval</a>
+                  <span class="venue">&middot; SIGIR Forum 2007</span>
+                  <span class="authors">Alonso, Gertz, Baeza-Yates</span>
+                </div>
+                <div class="paper">
+                  <a href="https://aclanthology.org/S10-1071/" target="_blank" rel="noopener noreferrer" class="title">HeidelTime: High Quality Rule-Based Extraction and Normalization of Temporal Expressions</a>
+                  <span class="venue">&middot; SemEval 2010</span>
+                  <span class="authors">Str&ouml;tgen, Gertz</span>
+                </div>
+                <div class="paper">
+                  <a href="https://aclanthology.org/L12-1122/" target="_blank" rel="noopener noreferrer" class="title">SUTime: A Library for Recognizing and Normalizing Time Expressions</a>
+                  <span class="venue">&middot; LREC 2012</span>
+                  <span class="authors">Chang, Manning</span>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
-
+ 
         <div class="slot">
           <span class="duration">20 min</span>
           <div class="card">
@@ -708,9 +748,29 @@
               <li>Temporal adaptation, continual learning, and timestamp conditioning</li>
               <li>How neural encoders capture or forget temporal signals</li>
             </ul>
+            <details class="papers">
+              <summary>Related papers</summary>
+              <div class="paper-list">
+                <div class="paper">
+                  <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00459/110012/" target="_blank" rel="noopener noreferrer" class="title">Time-Aware Language Models as Temporal Knowledge Bases</a>
+                  <span class="venue">&middot; TACL 2022</span>
+                  <span class="authors">Dhingra, Cole, Eisenschlos, Gillick, Eisenstein, Cohen</span>
+                </div>
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/10.1145/3488560.3498529" target="_blank" rel="noopener noreferrer" class="title">Time Masking for Temporal Language Models</a>
+                  <span class="venue">&middot; WSDM 2022</span>
+                  <span class="authors">Rosin, Guy, Radinsky</span>
+                </div>
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/10.1145/3539618.3591686" target="_blank" rel="noopener noreferrer" class="title">BiTimeBERT: Extending Pre-Trained Language Representations with Bi-Temporal Information</a>
+                  <span class="venue">&middot; SIGIR 2023</span>
+                  <span class="authors">Wang, Jatowt, Yoshikawa, Cai</span>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
-
+ 
         <div class="slot">
           <span class="duration">10 min</span>
           <div class="card">
@@ -718,7 +778,7 @@
             <span class="goal">Clarify foundational concepts (TIE and TIR) and prepare for the RAG and reasoning sections.</span>
           </div>
         </div>
-
+ 
         <div class="slot break">
           <span class="duration">15 min</span>
           <div class="card">
@@ -726,7 +786,7 @@
             <span class="goal">Informal networking and discussion.</span>
           </div>
         </div>
-
+ 
         <div class="slot">
           <span class="duration">30 min</span>
           <div class="card">
@@ -738,9 +798,39 @@
               <li>Temporal reasoning: event ordering, duration inference, multi-hop reasoning</li>
               <li>Benchmarks for evaluation and temporal reasoning limits of LLMs</li>
             </ul>
+            <details class="papers">
+              <summary>Related papers</summary>
+              <div class="paper-list">
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/10.1145/3616855.3635818" target="_blank" rel="noopener noreferrer" class="title">Temporal Blind Spots in Large Language Models</a>
+                  <span class="venue">&middot; WSDM 2024</span>
+                  <span class="authors">Wallat, Jatowt, Anand</span>
+                </div>
+                <div class="paper">
+                  <a href="https://aclanthology.org/2024.findings-acl.820/" target="_blank" rel="noopener noreferrer" class="title">FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation</a>
+                  <span class="venue">&middot; ACL Findings 2024</span>
+                  <span class="authors">Vu, Iyyer, Wang, Constant, Wei, Wei, et al.</span>
+                </div>
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/10.1145/3627673.3679800" target="_blank" rel="noopener noreferrer" class="title">Time-Sensitive Retrieval-Augmented Generation for Question Answering</a>
+                  <span class="venue">&middot; CIKM 2024</span>
+                  <span class="authors">Wu, Liu, He, Liu, Zhang, Wang, Wang</span>
+                </div>
+                <div class="paper">
+                  <a href="https://aclanthology.org/2025.findings-acl.810/" target="_blank" rel="noopener noreferrer" class="title">A Study into Investigating Temporal Robustness of LLMs</a>
+                  <span class="venue">&middot; ACL Findings 2025</span>
+                  <span class="authors">Wallat, Abdallah, Jatowt, Anand</span>
+                </div>
+                <div class="paper">
+                  <a href="https://arxiv.org/abs/2502.21024" target="_blank" rel="noopener noreferrer" class="title">TempRetriever: Fusion-based Temporal Dense Passage Retrieval for Time-Sensitive Questions</a>
+                  <span class="venue">&middot; WSDM 2026</span>
+                  <span class="authors">Abdallah, Piryani, Wallat, Anand, Jatowt</span>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
-
+ 
         <div class="slot">
           <span class="duration">20 min</span>
           <div class="card">
@@ -752,9 +842,24 @@
               <li>Temporal index sharding, archive search, and time-travel retrieval</li>
               <li>Evaluation under dynamic and temporally shifting datasets</li>
             </ul>
+            <details class="papers">
+              <summary>Related papers</summary>
+              <div class="paper-list">
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/10.1145/2009916.2009990" target="_blank" rel="noopener noreferrer" class="title">Temporal Index Sharding for Space-Time Efficiency in Archive Search</a>
+                  <span class="venue">&middot; SIGIR 2011</span>
+                  <span class="authors">Anand, Bedathur, Berberich, Schenkel</span>
+                </div>
+                <div class="paper">
+                  <a href="https://dl.acm.org/doi/10.1145/2348283.2348318" target="_blank" rel="noopener noreferrer" class="title">Index Maintenance for Time-Travel Text Search</a>
+                  <span class="venue">&middot; SIGIR 2012</span>
+                  <span class="authors">Anand, Bedathur, Berberich, Schenkel</span>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
-
+ 
         <div class="slot">
           <span class="duration">10 min</span>
           <div class="card">
@@ -764,9 +869,24 @@
               <li>Temporal uncertainty, diachronic&ndash;synchronic integration</li>
               <li>Continual updates, temporally aware LLM agents, dynamic evaluation</li>
             </ul>
+            <details class="papers">
+              <summary>Related papers</summary>
+              <div class="paper-list">
+                <div class="paper">
+                  <a href="https://aclanthology.org/2023.emnlp-main.418/" target="_blank" rel="noopener noreferrer" class="title">Do Language Models Have a Common Sense Regarding Time?</a>
+                  <span class="venue">&middot; EMNLP 2023</span>
+                  <span class="authors">Jain, Sojitra, Acharya, Saha, Jatowt, Dandapat</span>
+                </div>
+                <div class="paper">
+                  <a href="https://arxiv.org/abs/2505.20243" target="_blank" rel="noopener noreferrer" class="title">Open challenges &amp; research roadmap (Section 7 of our survey)</a>
+                  <span class="venue">&middot; ACL 2026</span>
+                  <span class="authors">Piryani, Abdallah, Mozafari, Anand, Jatowt</span>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
-
+ 
         <div class="slot">
           <span class="duration">15 min</span>
           <div class="card">
@@ -776,114 +896,6 @@
               <li>Key takeaways unifying Extraction, Retrieval, and Answering</li>
               <li>Interactive discussion on open research problems</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= READINGS ================= -->
-    <section id="readings">
-      <h2 class="section-title"><span>Prepare</span>Selected Readings</h2>
-      <p style="color: var(--text-dim); margin-bottom: 24px;">
-        A short, curated list following the tutorial structure. For the full collection of 150+
-        papers, see our
-        <a href="https://github.com/DataScienceUIBK/TemporalQA-Survey" target="_blank" rel="noopener noreferrer" style="color: var(--pink); font-weight: 600;">GitHub repository</a>.
-      </p>
-
-      <div class="card">
-        <div class="reading-group">
-          <h3>Main Reference</h3>
-          <div class="paper featured">
-            <a href="https://arxiv.org/abs/2505.20243" target="_blank" rel="noopener noreferrer" class="title">It's High Time: A Survey of Temporal Question Answering</a>
-            <span class="venue">&middot; ACL 2026</span>
-            <span class="authors">Piryani, Abdallah, Mozafari, Anand, Jatowt &mdash; the survey this tutorial builds on, reviewing 150+ papers.</span>
-          </div>
-          <div class="paper">
-            <a href="https://dl.acm.org/doi/10.1145/2619088" target="_blank" rel="noopener noreferrer" class="title">Survey of Temporal Information Retrieval and Related Applications</a>
-            <span class="venue">&middot; ACM Computing Surveys 2014</span>
-            <span class="authors">Campos, Dias, Jorge, Jatowt</span>
-          </div>
-        </div>
-
-        <div class="reading-group">
-          <h3>Foundations: Pre-Neural Extraction &amp; Retrieval</h3>
-          <div class="paper">
-            <a href="https://dl.acm.org/doi/abs/10.1145/956863.956951" target="_blank" rel="noopener noreferrer" class="title">Time-Based Language Models</a>
-            <span class="venue">&middot; CIKM 2003</span>
-            <span class="authors">Li, Croft</span>
-          </div>
-          <div class="paper">
-            <a href="https://link.springer.com/chapter/10.1007/11581062_4" target="_blank" rel="noopener noreferrer" class="title">Temporal Ranking of Search Engine Results</a>
-            <span class="venue">&middot; WISE 2005</span>
-            <span class="authors">Jatowt, Kawai, Tanaka</span>
-          </div>
-          <div class="paper">
-            <a href="https://dl.acm.org/doi/10.1145/1328964.1328968" target="_blank" rel="noopener noreferrer" class="title">On the Value of Temporal Information in Information Retrieval</a>
-            <span class="venue">&middot; SIGIR Forum 2007</span>
-            <span class="authors">Alonso, Gertz, Baeza-Yates</span>
-          </div>
-          <div class="paper">
-            <a href="https://aclanthology.org/S10-1071/" target="_blank" rel="noopener noreferrer" class="title">HeidelTime: High Quality Rule-Based Extraction and Normalization of Temporal Expressions</a>
-            <span class="venue">&middot; SemEval 2010</span>
-            <span class="authors">Str&ouml;tgen, Gertz</span>
-          </div>
-          <div class="paper">
-            <a href="https://aclanthology.org/L12-1122/" target="_blank" rel="noopener noreferrer" class="title">SUTime: A Library for Recognizing and Normalizing Time Expressions</a>
-            <span class="venue">&middot; LREC 2012</span>
-            <span class="authors">Chang, Manning</span>
-          </div>
-          <div class="paper">
-            <a href="https://dl.acm.org/doi/10.1145/2348283.2348318" target="_blank" rel="noopener noreferrer" class="title">Index Maintenance for Time-Travel Text Search</a>
-            <span class="venue">&middot; SIGIR 2012</span>
-            <span class="authors">Anand, Bedathur, Berberich, Schenkel</span>
-          </div>
-        </div>
-
-        <div class="reading-group">
-          <h3>Neural &amp; Temporal Language Models</h3>
-          <div class="paper">
-            <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00459/110012/" target="_blank" rel="noopener noreferrer" class="title">Time-Aware Language Models as Temporal Knowledge Bases</a>
-            <span class="venue">&middot; TACL 2022</span>
-            <span class="authors">Dhingra, Cole, Eisenschlos, Gillick, Eisenstein, Cohen</span>
-          </div>
-          <div class="paper">
-            <a href="https://dl.acm.org/doi/10.1145/3488560.3498529" target="_blank" rel="noopener noreferrer" class="title">Time Masking for Temporal Language Models</a>
-            <span class="venue">&middot; WSDM 2022</span>
-            <span class="authors">Rosin, Guy, Radinsky</span>
-          </div>
-          <div class="paper">
-            <a href="https://dl.acm.org/doi/10.1145/3539618.3591686" target="_blank" rel="noopener noreferrer" class="title">BiTimeBERT: Extending Pre-Trained Language Representations with Bi-Temporal Information</a>
-            <span class="venue">&middot; SIGIR 2023</span>
-            <span class="authors">Wang, Jatowt, Yoshikawa, Cai</span>
-          </div>
-        </div>
-
-        <div class="reading-group">
-          <h3>Temporal RAG &amp; LLM Reasoning</h3>
-          <div class="paper">
-            <a href="https://dl.acm.org/doi/10.1145/3616855.3635818" target="_blank" rel="noopener noreferrer" class="title">Temporal Blind Spots in Large Language Models</a>
-            <span class="venue">&middot; WSDM 2024</span>
-            <span class="authors">Wallat, Jatowt, Anand</span>
-          </div>
-          <div class="paper">
-            <a href="https://aclanthology.org/2024.findings-acl.820/" target="_blank" rel="noopener noreferrer" class="title">FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation</a>
-            <span class="venue">&middot; ACL Findings 2024</span>
-            <span class="authors">Vu, Iyyer, Wang, Constant, Wei, Wei, et al.</span>
-          </div>
-          <div class="paper">
-            <a href="https://dl.acm.org/doi/10.1145/3627673.3679800" target="_blank" rel="noopener noreferrer" class="title">Time-Sensitive Retrieval-Augmented Generation for Question Answering</a>
-            <span class="venue">&middot; CIKM 2024</span>
-            <span class="authors">Wu, Liu, He, Liu, Zhang, Wang, Wang</span>
-          </div>
-          <div class="paper">
-            <a href="https://aclanthology.org/2025.findings-acl.810/" target="_blank" rel="noopener noreferrer" class="title">A Study into Investigating Temporal Robustness of LLMs</a>
-            <span class="venue">&middot; ACL Findings 2025</span>
-            <span class="authors">Wallat, Abdallah, Jatowt, Anand</span>
-          </div>
-          <div class="paper">
-            <a href="https://arxiv.org/abs/2502.21024" target="_blank" rel="noopener noreferrer" class="title">TempRetriever: Fusion-based Temporal Dense Passage Retrieval for Time-Sensitive Questions</a>
-            <span class="venue">&middot; WSDM 2026</span>
-            <span class="authors">Abdallah, Piryani, Wallat, Anand, Jatowt</span>
           </div>
         </div>
       </div>
@@ -899,7 +911,7 @@
             Our comprehensive survey of Temporal Question Answering, reviewing over 150 papers.
             To appear at ACL 2026.
           </p>
-          <p style="margin-top: 12px;"><a href="https://arxiv.org/abs/2505.20243" target="_blank" rel="noopener noreferrer">Read on arXiv &rarr;</a></p>
+          <p style="margin-top: 12px;"><a href="https://aclanthology.org/2026.acl-long.1332/" target="_blank" rel="noopener noreferrer">Read on arXiv &rarr;</a></p>
         </div>
         <div class="card">
           <h2>&#128218; Paper Collection</h2>
@@ -949,13 +961,29 @@
         <h2 style="margin-top: 30px;">Cite the Survey</h2>
         <div class="bibtex-wrap">
           <button class="copy-btn" onclick="copyBibtex('bib-survey', this)">Copy</button>
-          <pre class="bibtex" id="bib-survey">@article{piryani2025high,
-  title   = {It's High Time: A Survey of Temporal Question Answering},
-  author  = {Piryani, Bhawna and Abdallah, Abdelrahman and Mozafari, Jamshid
-             and Anand, Avishek and Jatowt, Adam},
-  journal = {arXiv preprint arXiv:2505.20243},
-  year    = {2025}
-}</pre>
+          <pre class="bibtex" id="bib-survey">
+            @inproceedings{piryani-etal-2026-high,
+    title = "It{'}s High Time: A Survey of Temporal Question Answering",
+    author = "Piryani, Bhawna  and
+      Abdallah, Abdelrahman  and
+      Mozafari, Jamshid  and
+      Anand, Avishek  and
+      Jatowt, Adam",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.acl-long.1332/",
+    doi = "10.18653/v1/2026.acl-long.1332",
+    pages = "28852--28881",
+    ISBN = "979-8-89176-390-6",
+    }
+          </pre>
         </div>
       </div>
     </section>
