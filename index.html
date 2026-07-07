@@ -538,6 +538,42 @@
       text-decoration: underline;
     }
  
+
+    /* ---------- Text alignment ---------- */
+    section:not(.hero) {
+      text-align: left;
+    }
+
+    .section-title,
+    .card,
+    .card p,
+    .card li,
+    .slot,
+    .paper,
+    .paper-list,
+    .bibtex-wrap,
+    pre.bibtex {
+      text-align: left;
+    }
+
+    .abstract p {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+
+    .presenter {
+      text-align: center;
+    }
+
+    .presenter .bio {
+      text-align: left;
+    }
+
+    .info-grid .card {
+      height: 100%;
+    }
+
     /* ---------- Mobile ---------- */
     @media (max-width: 700px) {
       .hero h1 {
@@ -937,13 +973,12 @@
 
     <!-- ================= MATERIALS ================= -->
     <section id="materials">
-      <h2 class="section-title"><span>Resources</span>Materials</h2>
+      <h2 class="section-title">Materials</h2>
       <div class="info-grid" style="margin-top: 0;">
         <div class="card">
           <h2>&#128220; Survey Paper</h2>
           <p>
             Our comprehensive survey of Temporal Question Answering, reviewing over 150 papers.
-            To appear at ACL 2026.
           </p>
           <p style="margin-top: 12px;"><a href="https://aclanthology.org/2026.acl-long.1332/" target="_blank" rel="noopener noreferrer">Link to survey &rarr;</a></p>
         </div>
@@ -968,7 +1003,7 @@
 
     <!-- ================= CITATION ================= -->
     <section id="citation">
-      <h2 class="section-title"><span>Reference</span>Citation</h2>
+      <h2 class="section-title">Reference</h2>
       <div class="card">
         <h2>Cite the Tutorial</h2>
         <p>
@@ -996,26 +1031,19 @@
         <div class="bibtex-wrap">
           <button class="copy-btn" onclick="copyBibtex('bib-survey', this)">Copy</button>
           <pre class="bibtex" id="bib-survey">@inproceedings{piryani-etal-2026-high,
-    title = "It{'}s High Time: A Survey of Temporal Question Answering",
-    author = "Piryani, Bhawna  and
-              Abdallah, Abdelrahman  and
-              Mozafari, Jamshid  and
-              Anand, Avishek  and
-              Jatowt, Adam",
-    editor = "Liakata, Maria  and
-              Moreira, Viviane P.  and
-              Zhang, Jiajun  and
-              Jurgens, David",
-    booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
-    month = jul,
-    year = "2026",
-    address = "San Diego, California, United States",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2026.acl-long.1332/",
-    doi = "10.18653/v1/2026.acl-long.1332",
-    pages = "28852--28881",
-    ISBN = "979-8-89176-390-6",
-    }</pre>
+  title     = {It's High Time: A Survey of Temporal Question Answering},
+  author    = {Piryani, Bhawna and Abdallah, Abdelrahman and Mozafari, Jamshid and
+               Anand, Avishek and Jatowt, Adam},
+  booktitle = {Proceedings of the 64th Annual Meeting of the Association for
+               Computational Linguistics (Volume 1: Long Papers)},
+  year      = {2026},
+  month     = jul,
+  address   = {San Diego, California, United States},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2026.acl-long.1332/},
+  doi       = {10.18653/v1/2026.acl-long.1332},
+  pages     = {28852--28881}
+}</pre>
         </div>
       </div>
     </section>
