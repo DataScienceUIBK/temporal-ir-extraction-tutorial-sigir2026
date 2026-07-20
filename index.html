@@ -592,6 +592,113 @@
       text-align: left;
     }
 
+    /* ---------- Slide materials ---------- */
+    .slides-intro {
+      max-width: 820px;
+      margin-bottom: 22px;
+      color: var(--text-dim);
+    }
+
+    .slides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 18px;
+    }
+
+    .slide-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 230px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 8px 26px rgba(51, 65, 85, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .slide-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .slide-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 15px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.9rem;
+      box-shadow: 0 7px 17px rgba(79, 70, 229, 0.20);
+    }
+
+    .slide-card h3 {
+      color: var(--text-strong);
+      font-size: 1.08rem;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .slide-presenter {
+      display: block;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    .slide-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: auto;
+    }
+
+    .slide-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 750;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .slide-link.view {
+      color: #ffffff;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      box-shadow: 0 7px 16px rgba(79, 70, 229, 0.18);
+    }
+
+    .slide-link.download {
+      color: var(--primary-dark);
+      background: #ffffff;
+      border: 1px solid var(--line-strong);
+    }
+
+    .slide-link:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .slide-link.view:hover {
+      color: #ffffff;
+      box-shadow: 0 9px 20px rgba(79, 70, 229, 0.24);
+    }
+
+    .slide-link.download:hover {
+      color: var(--secondary);
+      background: #f8f7ff;
+    }
+
     /* ---------- Citation ---------- */
     .bibtex-wrap {
       position: relative;
@@ -727,8 +834,8 @@
         <a href="#citation">Cite</a>
       </div>
     </div>
-  </nav>
- 
+  </nav> 
+  
   <div class="container" id="top">
     <section class="hero">
       <div>
@@ -1250,34 +1357,128 @@
 
     <!-- ================= MATERIALS ================= -->
     <section id="materials">
-      <h2 class="section-title"><span>Resources</span>Materials</h2>
-      <div class="info-grid" style="margin-top: 0;">
+      <h2 class="section-title"><span>Resources</span>Tutorial Slides</h2>
+      <p class="slides-intro">
+        Slides are provided separately for each part of the tutorial. Use <strong>View slides</strong>
+        to open a PDF in your browser, or <strong>Download PDF</strong> to save a local copy.
+      </p>
+
+      <div class="slides-grid">
+        <article class="slide-card">
+          <span class="slide-number">01</span>
+          <h3>Introduction &amp; Motivation</h3>
+          <span class="slide-presenter">Presenter: Adam Jatowt</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part1.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Introduction and Motivation">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part1.pdf" download aria-label="Download slides for Introduction and Motivation">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">02</span>
+          <h3>Core Concepts &amp; Temporal IR Tasks</h3>
+          <span class="slide-presenter">Presenter: Bhawna Piryani</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part2.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Core Concepts and Temporal IR Tasks">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part2.pdf" download aria-label="Download slides for Core Concepts and Temporal IR Tasks">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">03</span>
+          <h3>Foundations: Pre-LLM Temporal IR</h3>
+          <span class="slide-presenter">Presenter: Avishek Anand</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part3.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Foundations Pre-LLM Temporal IR">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part3.pdf" download aria-label="Download slides for Foundations Pre-LLM Temporal IR">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">04</span>
+          <h3>Neural &amp; Transformer-based Temporal Models</h3>
+          <span class="slide-presenter">Presenter: Avishek Anand</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part4.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Neural and Transformer-based Temporal Models">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part4.pdf" download aria-label="Download slides for Neural and Transformer-based Temporal Models">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">05</span>
+          <h3>Temporal Information Extraction &amp; Prediction Tasks</h3>
+          <span class="slide-presenter">Presenter: Bhawna Piryani</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part5.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Temporal Information Extraction and Prediction Tasks">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part5.pdf" download aria-label="Download slides for Temporal Information Extraction and Prediction Tasks">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">06</span>
+          <h3>Temporal QA/IR Datasets</h3>
+          <span class="slide-presenter">Presenter: Adam Jatowt</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part6.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Temporal QA and IR Datasets">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part6.pdf" download aria-label="Download slides for Temporal QA and IR Datasets">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">07</span>
+          <h3>Temporal RAG</h3>
+          <span class="slide-presenter">Presenter: Adam Jatowt</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part7.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Temporal RAG">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part7.pdf" download aria-label="Download slides for Temporal RAG">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">08</span>
+          <h3>Temporal Web &amp; Evaluation Ecosystem</h3>
+          <span class="slide-presenter">Presenter: Bhawna Piryani</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part8.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Temporal Web and Evaluation Ecosystem">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part8.pdf" download aria-label="Download slides for Temporal Web and Evaluation Ecosystem">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">09</span>
+          <h3>Emerging Topics &amp; Open Challenges</h3>
+          <span class="slide-presenter">Presenter: Adam Jatowt</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part9.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Emerging Topics and Open Challenges">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part9.pdf" download aria-label="Download slides for Emerging Topics and Open Challenges">&#11015; Download PDF</a>
+          </div>
+        </article>
+
+        <article class="slide-card">
+          <span class="slide-number">10</span>
+          <h3>Concluding Discussion &amp; Q&amp;A</h3>
+          <span class="slide-presenter">All presenters</span>
+          <div class="slide-actions">
+            <a class="slide-link view" href="slides/Part10.pdf" target="_blank" rel="noopener noreferrer" aria-label="View slides for Concluding Discussion and Q and A">&#128065; View slides</a>
+            <a class="slide-link download" href="slides/Part10.pdf" download aria-label="Download slides for Concluding Discussion and Q and A">&#11015; Download PDF</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="info-grid">
         <div class="card">
           <h2>&#128220; Survey Paper</h2>
-          <p>
-            Our comprehensive survey of Temporal Question Answering, reviewing over 160 papers.
-          </p>
-          <p style="margin-top: 12px;"><a href="https://aclanthology.org/2026.acl-long.1332/" target="_blank" rel="noopener noreferrer">Link to survey &rarr;</a></p>
+          <p>Our comprehensive survey of Temporal Question Answering, reviewing over 160 papers.</p>
+          <p style="margin-top: 12px;"><a href="https://aclanthology.org/2026.acl-long.1332/" target="_blank" rel="noopener noreferrer">Read the survey &rarr;</a></p>
         </div>
         <div class="card">
           <h2>&#128218; Paper Collection</h2>
-          <p>
-            A curated, continuously updated repository of related research papers, datasets, tools,
-            and resources on temporal QA and IR.
-          </p>
+          <p>A curated repository of papers, datasets, tools, and resources on temporal QA and IR.</p>
           <p style="margin-top: 12px;"><a href="https://github.com/DataScienceUIBK/TemporalQA-Survey" target="_blank" rel="noopener noreferrer">Browse on GitHub &rarr;</a></p>
-        </div>
-        <div class="card">
-          <h2>&#127909; Slides</h2>
-          <p>
-            All presentation slides will be made publicly available on this website after the
-            tutorial. Check back after July 2026.
-          </p>
-          <p style="margin-top: 12px;"><span style="color: var(--text-dim);">Available after the event</span></p>
         </div>
       </div>
     </section>
-
+    
     <!-- ================= CITATION ================= -->
     <section id="citation">
       <h2 class="section-title"><span>Reference</span>Citation</h2>
